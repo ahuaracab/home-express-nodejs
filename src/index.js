@@ -36,7 +36,6 @@ app.get('/*', (req, res) => {
     res.end('Archivo no encontrado!')
 });
 
-app.listen(3000, () => {
-    console.log('Servidor funcionando!')
-    console.log('Nombre de la app: ', app.get('appName'))
+app.listen(process.env.PORT || 3000, () => {
+    console.log('Server is listening on port', process.env.PORT || 3000)
 });
